@@ -51,7 +51,11 @@ const handleSubmit = async (e) => {
 };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-500 to-blue-600 px-4">
+    // <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-500 to-blue-600 px-4">
+    <div className="min-h-[91.3vh] bg-gray-50 p-5 flex items-center justify-center bg-gradient-to-r from-purple-500 to-blue-600 px-4">
+
+
+     
       <div className="bg-white/90 backdrop-blur-lg p-8 rounded-2xl shadow-2xl w-full max-w-md">
         <h2 className="text-3xl font-extrabold mb-6 text-center text-gray-800 ">
           🔐 Login
