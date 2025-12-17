@@ -3222,7 +3222,7 @@ export default function ProjectPage() {
       <div className="bg-gradient-to-r from-blue-600 to-indigo-700 shadow-2xl sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
           <div className="flex items-center gap-6">
-            <button onClick={() => navigate("/dashboard")} className="px-6 py-3 bg-white/20 text-white font-semibold rounded-xl hover:bg-white/30 transition-all flex items-center gap-2">
+            <button onClick={() => navigate("/dashboard")} className="cursor-pointer px-6 py-3 bg-white/20 text-white font-semibold rounded-xl hover:bg-white/30 transition-all flex items-center gap-2">
               Back to Projects
             </button>
             <div className="text-white">
@@ -3232,7 +3232,7 @@ export default function ProjectPage() {
           </div>
           <div className="flex items-center gap-4">
             <RateBadge />
-            <button onClick={downloadReport} className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-bold rounded-xl shadow-2xl transition-all flex items-center gap-3">
+            <button onClick={downloadReport} className="cursor-pointer  px-8 py-4 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-bold rounded-xl shadow-2xl transition-all flex items-center gap-3">
               Download Excel Report
             </button>
           </div>
@@ -3289,7 +3289,7 @@ export default function ProjectPage() {
         <div className="bg-white rounded-2xl shadow-lg p-6 mb-8 flex flex-wrap items-end gap-4">
           <div className="flex-1 min-w-[200px]">
             <label className="block text-gray-700 font-bold mb-2">Filter by Month</label>
-            <select value={filterMonth} onChange={(e) => setFilterMonth(e.target.value)} className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-blue-200 focus:border-blue-500">
+            <select value={filterMonth} onChange={(e) => setFilterMonth(e.target.value)} className="cursor-pointer  w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-blue-200 focus:border-blue-500">
               <option value="">All Months</option>
               {monthNames.map((m, i) => (
                 <option key={i + 1} value={i + 1}>{m}</option>
@@ -3299,18 +3299,18 @@ export default function ProjectPage() {
 
           <div className="flex-1 min-w-[200px]">
             <label className="block text-gray-700 font-bold mb-2">Filter by Year</label>
-            <select value={filterYear} onChange={(e) => setFilterYear(e.target.value)} className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-blue-200 focus:border-blue-500">
+            <select value={filterYear} onChange={(e) => setFilterYear(e.target.value)} className="cursor-pointer w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-blue-200 focus:border-blue-500">
               <option value="">All Years</option>
-              {[2024, 2025, 2026, 2027, 2028, 2029, 2030.2031, 2032, 2033].map(year => (
+              {[2024, 2025, 2026, 2027, 2028, 2029, 2030,2031, 2032, 2033].map(year => (
                 <option key={year} value={year}>{year}</option>
               ))}
             </select>
           </div>
 
-          <button onClick={() => { setFilterMonth(currentMonth); setFilterYear(currentYear); }} className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all">
+          <button onClick={() => { setFilterMonth(currentMonth); setFilterYear(currentYear); }} className="cursor-pointer px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all">
             Current Month
           </button>
-          <button onClick={() => { setFilterMonth(""); setFilterYear(""); }} className="px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-bold rounded-xl transition-all">
+          <button onClick={() => { setFilterMonth(""); setFilterYear(""); }} className="cursor-pointer px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-bold rounded-xl transition-all">
             All Time
           </button>
         </div>
